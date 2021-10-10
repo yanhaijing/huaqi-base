@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .a {
+                border: 1px dashed green;
+            }
+            .b {
+                border: 1px solid red;
+            }
+            @supports (transform: translate(0, 30px)) {
+                .b {
+                    transform: translate(0, 30px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="a">
+            <div class="b">bbb</div>
+        </div>
+    </body>
+</html>

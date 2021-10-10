@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            .grid > div {
+                color: white;
+                font-size: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .grid {
+                display: grid;
+                width: 500px;
+                height: 300px;
+                gap: 10px;
+                flex-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+            .grid-1 {
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+                background: maroon;
+            }
+            .grid-2 {
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+                background: green;
+            }
+            .grid-3 {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+                background: blue;
+            }
+            .grid-4 {
+                grid-column: 3 / 4;
+                grid-row: 2 / 4;
+                background: purple;
+            }
+            .grid-5 {
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+                background: orange;
+            }
+        </style>
+        <div class="grid">
+            <div class="grid-1">1</div>
+            <div class="grid-2">2</div>
+            <div class="grid-3">3</div>
+            <div class="grid-4">4</div>
+            <div class="grid-5">5</div>
+        </div>
+
+        <style>
+            .flex {
+                display: flow-root;
+                margin-top: 30px;
+                width: 500px;
+            }
+            .flex-inner {
+                margin: -5px;
+                display: flex;
+                height: 300px;
+            }
+            .flex-col-1 {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+            }
+            .flex-1 {
+                flex: 2;
+                background: maroon;
+                margin: 5px;
+            }
+            
+            .flex-row-2 {
+                flex: 1;
+                display: flex;
+            }
+            .flex-3 {
+                flex: 1;
+                background: blue;
+                margin: 5px;
+            }
+            .flex-5 {
+                flex: 1;
+                background: orange;
+                margin: 5px;
+            }
+
+            .flex-col-2 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .flex-2 {
+                flex: 1;
+                background: green;
+                margin: 5px;
+            }
+            .flex-4 {
+                flex: 2;
+                background: purple;
+                margin: 5px;
+            }
+        </style>
+        <div class="flex">
+            <div class="flex-inner">
+                <div class="flex-col-1">
+                    <div class="flex-1">1</div>
+                    <div class="flex-row-2">
+                        <div class="flex-3">3</div>
+                        <div class="flex-5">5</div>
+                    </div>
+                </div>
+                <div class="flex-col-2">
+                    <div class="flex-2">2</div>
+                    <div class="flex-4">4</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

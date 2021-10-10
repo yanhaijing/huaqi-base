@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            .a span {
+                color: red;
+            }
+
+            .a > b {
+                color: green;
+            }
+        </style>
+        <div class="a">
+            <b>.a > b 子代选择器 选中</b>
+            <p>
+                <span>.a span 后代选择器 选中</span>
+            </p>
+            <p>
+                <b>.a > b 子代选择器 选不中</b>
+            </p>
+        </div>
+
+        <style>
+            .b + .c {
+                color: red;
+            }
+
+            .b ~ .d {
+                color: green;
+            }
+        </style>
+
+        <div class="b">我是.b</div>
+        <div class="c">.b + .c 能选中我</div>
+        <div class="c">.b + .c 不能选中我</div>
+        <div class="d">.b ~ .d 能选中我</div>
+    </body>
+</html>

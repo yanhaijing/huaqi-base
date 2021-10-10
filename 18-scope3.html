@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var a1 = 1;
+
+            function b() {
+                var b1 = 2;
+                let b2 = 2;
+
+                function c() {
+                    const c1 = 3;
+                }
+
+                c();
+            }
+
+            b();
+        </script>
+
+        <script>
+            GlobalExecutionContext = {
+                outer: null,
+                this: GlobalThisValue,
+                DeclarativeEnvironmentRecord: {
+                    a1: 1,
+                    b: function b() {}
+                }
+            }
+
+            bExecutionContext = {
+                outer: GlobalExecutionContext,
+                this: ThisBinding,
+                LexicalEnvironment: {
+                    outer: bExecutionContext,
+                    b2: 2,
+                },
+                VariableEnvironment: {
+                    arguments: {},
+                    b1: 2,
+                    c: function c() {}
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var a = 1;
+            function getA() {
+                console.log(this.a);
+            }
+
+            var obj = {
+                a: 2,
+            };
+
+            getA(); // 1
+            getA.call(); // 2
+            getA.apply(); // 2
+        </script>
+
+        <script>
+            var obj1 = {
+                b: 1,
+            };
+            var obj2 = {
+                b: 2,
+            };
+
+            const getB = function () {
+                console.log(this.b);
+            }.bind(obj1);
+
+            getB.call(obj2) // 不生效
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var people = {
+                age: 1,
+            };
+
+            var man = Object.create(people);
+            man.sex = "男";
+        </script>
+
+        <script>
+            class People {
+                age = 1;
+            }
+
+            class Man extends People {
+                sex = "男";
+            }
+
+            var man = new Man();
+        </script>
+
+        <script>
+            function People() {
+                this.age = 1
+            }
+
+            function Man() {
+                People.call(this) // super
+                this.sex = '男'
+            }
+
+            Man.prototype = Object.create(People.prototype);
+        </script>
+    </body>
+</html>

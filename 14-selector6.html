@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            .a .c span,
+            .a .d span,
+            .b .c span,
+            .b .d span {
+                color: red;
+            }
+        </style>
+        <div class="a">
+            <div class="c"><span>111</span></div>
+        </div>
+        <div class="b">
+            <div class="c"><span>222</span></div>
+        </div>
+
+        <style>
+            :is(.a, .b) :is(.c, .d) span {
+                color: green;
+            }
+        </style>
+
+        <div class="a">
+            <div class="c"><span>111</span></div>
+        </div>
+        <div class="b">
+            <div class="c"><span>222</span></div>
+        </div>
+    </body>
+</html>

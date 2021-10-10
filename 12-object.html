@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var obj = {
+                a: 1,
+            };
+
+            console.log(Object.assign({}, obj, { b: 2 }));
+
+            console.log({ ...obj, b: 2 });
+        </script>
+
+        <script>
+            var obj = {
+                a: 1,
+                b: 2,
+                c: 3,
+            };
+
+            const { a, ...other } = obj;
+            console.log(other);
+        </script>
+
+        <script>
+            var obj = {
+                a: 1,
+                b: 2,
+                c: 3,
+            };
+
+            console.log(Object.keys(obj).map((k) => obj[k]));
+            console.log(Object.values(obj));
+        </script>
+
+        <script>
+            var obj = {
+                a: 1,
+                b: 2,
+                c: 3,
+            };
+
+            console.log(Object.keys(obj).map((k) => [k, obj[k]]));
+            console.log(Object.entries(obj));
+        </script>
+    </body>
+</html>
